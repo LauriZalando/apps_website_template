@@ -1,0 +1,203 @@
+/* TEMPLATE BODY AND GENERAL TAGS
+// ------------------------------------------------------------------------- */
+
+body
+{
+    box-sizing: border-box;
+    font: 20px "Myriad Pro", Calibri, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+h1
+{
+    color: rgb(0, 0, 0);
+    font-size: 58px;
+    margin: 0;
+    padding: 80px 0 0 0;
+    text-align: center;
+}
+
+h2
+{
+    font-size: 36px;
+}
+
+h3
+{
+    font-size: 30px;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+#page
+{
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#fork
+{
+    background: url(../images/fork.png) no-repeat;
+    display: block;
+    height: 149px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 149px;
+    z-index: 7;
+}
+
+.outer
+{
+    clear: both;
+    margin: 0 auto;
+    min-width: 320px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.inner
+{
+    clear: both;
+    margin: auto;
+    position: relative;
+    max-width: 1110px;
+    text-align: left;
+}
+
+/* TEMPLATE MENU
+// ------------------------------------------------------------------------- */
+
+#menu-wrapper
+{
+    font-size: 21px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+#menu
+{
+    margin: 0 auto 0 auto;
+    padding: 0 !important;
+    text-align: left;
+}
+
+#menu div
+{
+    text-align: left;
+}
+
+#menu a
+{
+    color: rgb(250, 248, 245);
+    display: inline-block;
+    padding: 1px 18px 1px 18px;
+    margin: 0 1px 0 1px;
+}
+
+#menu a.active
+{
+    background: rgb(255, 255, 255);
+}
+
+#menu span
+{
+    float: right;
+    margin-top: 1px;
+}
+
+#menu .active
+{
+    border-bottom-color: rgb(140, 210, 50) !important;
+    color: rgb(140, 210, 50) !important;
+}
+
+
+
+/* TEMPLATE FOOTER
+// ------------------------------------------------------------------------- */
+
+#footer-logos
+{
+    background: rgb(240, 240, 240);
+    clear: both;
+    padding: 40px 0 40px 0;
+    text-align: left;
+}
+
+#footer-logos img
+{
+    margin: 0 20px 0 0;
+
+}
+
+#footer-notes
+{
+    background: rgb(220, 220, 220);
+    padding: 20px 0 40px 0;
+    text-align: left;
+}
+
+#footer-notes h3
+{
+    margin-left: 3px;
+}
+
+#footer-notes h3 img
+{
+    margin-left: 8px;
+}
+
+#footer-notes code
+{
+    margin-top: 7px;
+}
+
+#footer
+{
+    background: rgb(195, 195, 195);
+    height: 40px;
+    padding: 40px 0 40px 0;
+    text-align: left;
+}
+
+#footer .right
+{
+    float: right;
+}
+
+#footer .right img
+{
+    margin-left: 6px;
+}
+
+#footer a
+{
+    color: rgb(30, 30, 30);
+    margin-right: 20px;
+}
+
+#footer a:hover
+{
+    color: rgb(90, 160, 30);
+}
+
+.footer-right
+{
+    float: right;
+    padding: 8px;
+    width: 50%;
+}
