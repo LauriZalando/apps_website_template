@@ -7,15 +7,13 @@ $(document).ready(function()
 
     var $window = $(window),
         $body = $("body");
-    $wrapper = $("#wrapper");
+        $wrapper = $("#wrapper");
 
     // Make sure if fits on smaller screens.
     if ($window.innerWidth() < $body.innerWidth() - 1)
     {
         $body.css("zoom", 0.75);
     }
-
-    $("#demoframe-overlay").click(function(){ window.open("http://systemapp.io/demo/index.html", "SystemApp"); });
 });
 
 // Append JS and CSS dependencies.
