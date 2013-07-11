@@ -15,6 +15,12 @@ body
     -moz-box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
+    letter-spacing: -1px;
+}
+
 h1
 {
     color: rgb(0, 0, 0);
@@ -26,12 +32,14 @@ h1
 
 h2
 {
+    font-family: "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
     font-size: 36px;
 }
 
 h3
 {
     font-size: 30px;
+    font-weight: normal;
 }
 
 img
@@ -52,7 +60,7 @@ img
     height: 149px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 35px;
     width: 149px;
     z-index: 7;
 }
