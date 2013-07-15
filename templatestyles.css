@@ -34,7 +34,7 @@ h1
 h2
 {
     font-family: "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
-    font-size: 36px;
+    font-size: 40px;
 }
 
 h3
@@ -54,7 +54,6 @@ img
 
 #page
 {
-    margin-bottom: 40px;
     margin-top: 30px;
 }
 
@@ -138,8 +137,6 @@ img
     color: rgb(140, 210, 50) !important;
 }
 
-
-
 /* TEMPLATE FOOTER
 // ------------------------------------------------------------------------- */
 
@@ -182,6 +179,11 @@ img
     text-align: left;
 }
 
+#footer .left
+{
+    float: left;
+}
+
 #footer .right
 {
     float: right;
@@ -203,9 +205,26 @@ img
     color: rgb(90, 160, 30);
 }
 
-.footer-right
+/* MOBILE
+// ------------------------------------------------------------------------- */
+
+body.mobile #menu-app-title
 {
-    float: right;
-    padding: 8px;
-    width: 50%;
+    display: none;
+}
+
+body.mobile section#ime ul
+{
+    text-align: left;
+}
+
+body.mobile section#ime ul li
+{
+    text-align: left;
+}
+
+body.mobile #footer .inner .right
+{
+    float: left;
+    padding-left: 0;
 }

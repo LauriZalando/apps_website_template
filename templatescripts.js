@@ -1,17 +1,22 @@
 var zalAppName, zalDomain, gaId;
+var $window, $body, $wrapper;
 
 $(document).ready(function()
 {
+    $window = $(window);
+    $body = $("body");
+    $wrapper = $("#wrapper");
+
+    if ($window.innerWidth() < 1080) {
+        $body.addClass("mobile");
+    }
+
+    // Load menu and footer.
     loadTemplateMenu();
     loadTemplateFooter();
 
-    var $window = $(window),
-        $body = $("body");
-        $wrapper = $("#wrapper");
-
     // Make sure if fits on smaller screens.
-    if ($window.innerWidth() < $body.innerWidth() - 1)
-    {
+    if ($window.innerWidth() < $body.innerWidth() - 1) {
         $body.css("zoom", 0.75);
     }
 });
