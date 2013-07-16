@@ -189,7 +189,13 @@ img
     float: right;
 }
 
-#footer .right img
+#footer-logos .right, #footer-notes .right
+{
+    float: right;
+    width: 50%;
+}
+
+#footer .right img, #footer-logos .right img
 {
     margin-left: 6px;
 }
