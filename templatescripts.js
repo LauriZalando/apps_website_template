@@ -1,3 +1,4 @@
+var zalAppName, zalDomain, gaId;
 var $window, $body, $wrapper;
 
 $(document).ready(function()
@@ -32,26 +33,22 @@ function appendCssAndJs() {
     siteCss.rel = "stylesheet";
     siteCss.href = "styles.css";
 
-    var jqueryJs = document.createElement("script");
-    jqueryJs.src= "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js";
+    // Load site specific scripts and GA.
+    $.getScript("scripts.js", function(data, status, xhr) {
+        var gaJs = document.createElement("script");
+        gaJs.innerHTML = '' +
+            '(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){' +
+            '(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),' +
+            'm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)' +
+            '})(window,document,"script","//www.google-analytics.com/analytics.js","ga");' +
+            'ga("create", "' + zalDomain + '", "' + gaId + '");' +
+            'ga("send", "pageview");';
 
-    var siteJs = document.createElement("script");
-    siteJs.src= "scripts.js";
-
-    var gaJs = document.createElement("script");
-    gaJs.innerHTML = '' +
-        '(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){' +
-        '(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),' +
-        'm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)' +
-        '})(window,document,"script","//www.google-analytics.com/analytics.js","ga");' +
-        'ga("create", "' + getZalDomain() + '", "' + getGaId() + '");' +
-        'ga("send", "pageview");';
+        head.appendChild(gaJs);
+    });
 
     head.appendChild(templateCss);
     head.appendChild(siteCss);
-    head.appendChild(jqueryJs);
-    head.appendChild(siteJs);
-    head.appendChild(gaJs);
 }
 
 // Append straight away!
@@ -74,7 +71,6 @@ function loadTemplateMenu() {
     };
 
     $("#menu-wrapper").load("menu.html", callback);
-
 }
 
 // Load footer.
