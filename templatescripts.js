@@ -33,7 +33,7 @@ function appendCssAndJs() {
     siteCss.rel = "stylesheet";
     siteCss.href = "styles.css";
 
-    // Load site specific scripts and GA.
+    // Load site specific scripts and Google Analytics.
     $.getScript("scripts.js", function(data, status, xhr) {
         var gaJs = document.createElement("script");
         gaJs.innerHTML = '' +
