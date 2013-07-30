@@ -1,7 +1,4 @@
-var zalAppName, zalDomain, gaId;
 var $window, $body, $wrapper;
-var getZalDomain = function() { return zalDomain; }
-var getGaId = function() { return gaId; }
 
 $(document).ready(function()
 {
