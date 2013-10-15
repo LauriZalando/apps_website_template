@@ -57,6 +57,11 @@ img
     max-width: 100%;
 }
 
+code
+{
+    font-family: "Lucida Console", Monaco, Terminal, monospace;
+}
+
 #page
 {
     margin-top: 30px;
