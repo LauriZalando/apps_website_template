@@ -98,6 +98,12 @@ code
     text-align: left;
 }
 
+.clear
+{
+    clear: both;
+    height: 1px;
+}
+
 /* TEMPLATE MENU
 // ------------------------------------------------------------------------- */
 
