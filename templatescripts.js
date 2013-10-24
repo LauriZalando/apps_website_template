@@ -25,6 +25,11 @@ $(document).ready(function()
     if ($window.innerWidth() < $body.innerWidth() - 1) {
         $body.css("zoom", 0.75);
     }
+
+    // Enable syntax highlighter?
+    if (zalSH && zalSH != "") {
+        SyntaxHighlighter.all();
+    }
 });
 
 // Append JS and CSS dependencies.
