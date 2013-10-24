@@ -62,7 +62,7 @@ function appendCssAndJs() {
     });
 }
 
-// Append straight away!
+// Append CSS and JS away!
 appendCssAndJs();
 
 // Load top menu.
