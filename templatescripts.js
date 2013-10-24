@@ -1,4 +1,10 @@
-var zalAppName, zalDomain, gaId;
+// zalAppName defines the app or tool name.
+// zalDomain defines the base domain to the landing page.
+// zalSH defines the syntax highlighter, can be separated by commas, for example "Java,Python".
+// galId defines the Google Analytics ID (DEPRECATED!!!)
+var zalAppName, zalDomain, zalSH, gaId;
+
+// Cached DOM variables.
 var $window, $body, $wrapper;
 
 $(document).ready(function()
@@ -33,10 +39,27 @@ function appendCssAndJs() {
     siteCss.rel = "stylesheet";
     siteCss.href = "styles.css";
 
-    $.getScript("scripts.js");
-
+    // Append CSS files.
     head.appendChild(templateCss);
     head.appendChild(siteCss);
+
+    // Load scripts.js file and check for syntax highlighting.
+    $.getScript("scripts.js", function() {
+        if (zalSH && zalSH != "") {
+            zalSH = zalSH.split(",");
+
+            $.getScript("template/shCore.js");
+
+            var shCssCore = document.createElement("link");
+            shCssCore.rel = "stylesheet";
+            shCssCore.href = "template/shCoreDefault.css";
+            head.appendChild(shCssCore);
+
+            for (var i = 0; i < zalSH.length; i++) {
+                $.getScript("template/shBrush" + zalSH[i] + ".js");
+            }
+        }
+    });
 }
 
 // Append straight away!
