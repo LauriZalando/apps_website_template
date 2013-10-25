@@ -44,22 +44,7 @@ function appendCssAndJs() {
     head.appendChild(siteCss);
 
     // Load scripts.js file and check for syntax highlighting.
-    $.getScript("scripts.js", function() {
-        if (zalSH && zalSH != "") {
-            zalSH = zalSH.split(",");
-
-            $.getScript("template/shCore.js");
-
-            var shCssCore = document.createElement("link");
-            shCssCore.rel = "stylesheet";
-            shCssCore.href = "template/shCoreDefault.css";
-            head.appendChild(shCssCore);
-
-            for (var i = 0; i < zalSH.length; i++) {
-                $.getScript("template/shBrush" + zalSH[i] + ".js");
-            }
-        }
-    });
+    $.getScript("scripts.js");
 }
 
 // Append CSS and JS away!
