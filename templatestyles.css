@@ -61,8 +61,14 @@ code
 {
     background: rgb(30, 30, 30);
     color: rgb(140, 210, 50);
+    display: block;
     font-family: "Lucida Console", Monaco, "Bitstream Vera Sans Mono", Terminal;
     padding: 5px;
+}
+
+.syntaxhighlighter code
+{
+    display: inline;
 }
 
 #page
@@ -187,7 +193,6 @@ code
 
 #footer-notes code
 {
-    font-size: 18px;
     margin-top: 7px;
 }
 
